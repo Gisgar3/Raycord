@@ -1,0 +1,49 @@
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #474c54;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.25s;
+    font-family: "Titillium Web", sans-serif;
+    -webkit-user-select: none;
+}
+.sidenav a:hover {
+    color: #566d91;
+}
+.sidenav .closeButton {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    font-size: 36px;
+}
+#openButton:hover {
+    color: #566d91;
+}
+#openButton {
+    transition: 0.25s;
+    color: #ffffff;
+    padding:0px;
+    font-size:50px;
+    cursor:pointer;
+    float: left;
+    background-color: #474c54;
+    margin-top: 20px;
+    height:80px;
+    width:35px;
+    text-align:center;
+    font-family: "Titillium Web", sans-serif;
+    -webkit-user-select: none;
+}
