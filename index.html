@@ -10,20 +10,21 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link href="./index.css" rel="stylesheet">
     <script src="./index.js"></script>
 </head>
 
 <body style="background-color: #343940;">
     <div id="sidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closeButton" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" class="closeButton" onclick="closeNav()"><</a>
         <a href="#">About</a>
         <a href="#">Services</a>
         <a href="#">Clients</a>
         <a href="#">Contact</a>
     </div>
 
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+    <span id="openButton" onclick="openNav()">></span>
 </body>
 
 </html>

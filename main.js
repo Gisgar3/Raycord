@@ -3,6 +3,7 @@ Copyright (c) Gavin R. Isgar 2020
 Developed at Hack Upstate XV (October 3-4, 2020)
 */
 const {app, BrowserWindow} = require("electron");
+const fs = require("fs");
 
 let createWindow = () => {
     const win = new BrowserWindow({
