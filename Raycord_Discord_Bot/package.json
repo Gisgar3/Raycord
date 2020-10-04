@@ -1,0 +1,17 @@
+{
+  "name": "raycord_discord_bot",
+  "version": "0.0.1",
+  "description": "Discord bot that tracks server data and relays it to the Raycord client.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gavin R. Isgar",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "express": "^4.17.1",
+    "express-graphql": "^0.11.0",
+    "graphql": "^15.3.0"
+  }
+}
