@@ -10,27 +10,6 @@ let { buildSchema } = require('graphql');
 let userdata = require("./data/userdata.json");
 const tokens = require("./tokens.json");
 
-let schema = buildSchema(`
-  type Query {
-    hello: String
-  }
-`);
-
-// _db mocks out a simple database
-const _db = {
-    users: [
-      {
-        id: 1,
-        name: "John Doe"
-      }
-    ],
-    posts: [
-      {
-        user_id: 1,
-        text: "Hello World! This is my first post."
-      }
-    ]
-  }
   // userHandler mocks out a simple ORM
   const userHandler = {
     getUser(id) {
@@ -59,7 +38,7 @@ const _db = {
         return serverData;
     } 
   }
-  const schema2 = buildSchema(`
+  const schema = buildSchema(`
     type Post {
       text: String
     }
@@ -67,15 +46,19 @@ const _db = {
       name: String
       posts: [Post]
     }
+    type Latest_Message {
+      text: String
+      timestamp: String
+    }
     type Message {
-        latest_message: String
+        latest_message: [Latest_Message]
     }
     type Server {
         messages: [Message]
     }
     type Query {
       user(id: Int!): User
-      server(id: Int!): Server
+      server(id: String!): Server
     }
   `);
   const root = {
@@ -93,6 +76,7 @@ const _db = {
         const server_id = args.id;
         const server = userHandler.getServer(server_id);
         console.log(userHandler.getServer(server_id));
+        console.log(server[0].messages);
         return {
             messages: server[0].messages
         }
@@ -101,7 +85,7 @@ const _db = {
 
 let app = express();
 app.use('/graphql', graphqlHTTP({
-  schema: schema2,
+  schema: schema,
   rootValue: root,
   graphiql: true,
 }));
