@@ -25,9 +25,11 @@
     transition: 0.25s;
     font-family: "Titillium Web", sans-serif;
     -webkit-user-select: none;
+    white-space: nowrap;
 }
 .sidenav a:hover {
     color: #566d91;
+    text-shadow: 1px 2px 2px black;
 }
 .sidenav .closeButton {
     position: absolute;
@@ -37,6 +39,7 @@
 }
 #openButton:hover {
     color: #566d91;
+    text-shadow: 1px 2px 2px black;
 }
 #openButton {
     transition: 0.25s;
