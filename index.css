@@ -56,3 +56,8 @@
     font-family: "Titillium Web", sans-serif;
     -webkit-user-select: none;
 }
+#dashboardPlot {
+    width: 400px;
+    height:300px;
+    float:right;
+}
