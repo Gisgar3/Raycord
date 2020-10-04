@@ -19,5 +19,8 @@
   "homepage": "https://github.com/Gisgar3/Raycord#readme",
   "devDependencies": {
     "electron": "^10.1.3"
+  },
+  "dependencies": {
+    "electron-reload": "^1.5.0"
   }
 }

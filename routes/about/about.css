@@ -1,0 +1,5 @@
+.dragBar {
+    height: 20px;
+    width: 100%;
+    -webkit-app-region: drag;
+}
